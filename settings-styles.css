@@ -1,0 +1,354 @@
+/* Settings Page Styles */
+:root {
+    --settings-sidebar-width: 240px;
+    --settings-content-padding: 40px;
+}
+
+.settings-container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--dark-tertiary);
+    color: var(--text-color);
+    font-family: var(--font-primary);
+}
+
+/* Sidebar Styles */
+.settings-sidebar {
+    width: var(--settings-sidebar-width);
+    background-color: var(--dark-secondary);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.settings-header {
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-header h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.settings-nav {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.settings-nav-item {
+    padding: 10px 15px;
+    margin: 2px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.settings-nav-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.settings-nav-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.settings-nav-item.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.settings-footer {
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-nav-item.logout {
+    color: var(--danger-color);
+}
+
+/* Content Styles */
+.settings-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--settings-content-padding);
+}
+
+.settings-section {
+    display: none;
+    max-width: 660px;
+}
+
+.settings-section.active {
+    display: block;
+}
+
+.settings-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Account Info Styles */
+.account-info {
+    display: flex;
+    background-color: var(--dark-primary);
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.avatar-container {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.avatar-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-change {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--accent-color);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.username-container {
+    display: flex;
+    align-items: baseline;
+}
+
+.username-container h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    margin-right: 8px;
+}
+
+.username-container span {
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+.edit-button button {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-button button:hover {
+    background-color: #5e77d4;
+}
+
+/* Account Fields Styles */
+.account-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.field-group {
+    display: flex;
+    align-items: center;
+}
+
+.field-group h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    width: 140px;
+    margin: 0;
+}
+
+.field-value {
+    flex: 1;
+    font-size: 16px;
+}
+
+.edit-field {
+    background-color: transparent;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.edit-field:hover {
+    background-color: rgba(114, 137, 218, 0.1);
+}
+
+/* Profile Styles */
+.profile-banner {
+    margin-bottom: 24px;
+}
+
+.banner-preview {
+    width: 100%;
+    height: 120px;
+    background-color: var(--dark-primary);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.banner-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.banner-placeholder i {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile-about {
+    margin-bottom: 24px;
+}
+
+.profile-about h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+#about-me {
+    width: 100%;
+    height: 120px;
+    background-color: var(--dark-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 10px;
+    color: var(--text-color);
+    font-family: var(--font-primary);
+    resize: none;
+}
+
+.char-counter {
+    text-align: right;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Theme Options */
+.theme-options {
+    margin-bottom: 24px;
+}
+
+.theme-options h3 {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.theme-selector {
+    display: flex;
+    gap: 16px;
+}
+
+.theme-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.theme-preview {
+    width: 80px;
+    height: 60px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    border: 2px solid transparent;
+}
+
+.theme-option.selected .theme-preview {
+    border-color: var(--accent-color);
+}
+
+.theme-preview.dark {
+    background-color: var(--dark-tertiary);
+}
+
+.theme-preview.light {
+    background-color: #ffffff;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .settings-container {
+        flex-direction: column;
+    }
+    
+    .settings-sidebar {
+        width: 100%;
+        height: auto;
+    }
+    
+    .settings-content {
+        padding: 20px;
+    }
+    
+    .account-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .avatar-container {
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    
+    .field-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .field-group h3 {
+        width: 100%;
+    }
+}
